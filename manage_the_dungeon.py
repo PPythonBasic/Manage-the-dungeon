@@ -1,18 +1,23 @@
+import random
 list_items = []
 
 def add_items():
     global list_items
     while True:
-        item = input('Enter Item name : ').upper()
+        item = input('Enter Item name : ')
         if item != '':
+            if len(item) <= 2:
+                item = item.upper()
+            else:
+                item = item.capitalize()
             break
     while True:
-        price = input('Enter Price : ').upper()
+        price = input('Enter Price : ')
         if price != '':
             price = int(price)
             break
     while True:
-        amount = input('Enter Amount : ').upper()
+        amount = input('Enter Amount : ')
         if amount != '':
             amount = int(amount)
             break
@@ -32,7 +37,12 @@ def view_item():
     for i in list_items:
         print(f"- {i['Item_name']} {i['Price']}G {i['Amount']}x")
 
-
+def enter_dungeon():
+    global list_items
+    random_item = random.choice(list_items)
+    key_man = list_items.index(random_item)
+    lost_item = list_items.pop(key_man)
+    print(f"Hero receives {lost_item['Amount']}x {lost_item['Item_name']} item.")
 
 
 

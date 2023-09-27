@@ -7,3 +7,5 @@ if __name__ == "__main__":
   add_items()
   add_items()
   view_item()
+  enter_dungeon()
+  view_item()

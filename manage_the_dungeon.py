@@ -3,16 +3,16 @@ list_items = []
 def add_items():
     global list_items
     while True:
-        item = input('Enter Item name : ')
+        item = input('Enter Item name : ').upper()
         if item != '':
             break
     while True:
-        price = input('Enter Price : ')
+        price = input('Enter Price : ').upper()
         if price != '':
             price = int(price)
             break
     while True:
-        amount = input('Enter Amount : ')
+        amount = input('Enter Amount : ').upper()
         if amount != '':
             amount = int(amount)
             break

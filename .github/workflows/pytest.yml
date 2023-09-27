@@ -22,4 +22,4 @@ jobs:
         run: pip install -r requirements.txt  # modify with your dependency installation command
 
       - name: Run pytest
-        run: pytest manage_the_dungeon.py -v
+        run: pytest test.py -v

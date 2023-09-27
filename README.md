@@ -65,7 +65,7 @@ Hero receives 1x HP item.
      * เมื่อผู้เล่นได้รับไอเทมไปแล้วไอเทมที่อยู่ในคลังของดันเจี้ยนชิ้นนั้นก็จะถูกลดลงไปตามจำนวนที่ผู้เล่นได้ไป
 
 ### ฟังค์ชั่น
-- จะมีฟังก์ชันที่มีมาให้
+- จะมีฟังก์ชันที่มีมาให้ที่ไฟล์ manage_the_dungeon.py
 ```python
     def match_funct(choice:int):
         match choice:
@@ -82,6 +82,16 @@ Hero receives 1x HP item.
             choice = input('Choice : ')
             match_funct(choice)
 ```
+- ในไฟล์ main.py ไม่ต้องแก้ไขอะไรใช้ในการรันโปรแกรมอย่างเดียว
+### รันโปรแกรม
+```
+python3 main.py
+```
+หรือ
+```
+python main.py
+```
+
 # Implementation
 - ทำการ `Fork` ให้เรียบร้อยปุ่มตามภาพด้านล่าง
 

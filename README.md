@@ -11,7 +11,6 @@
 [0] Close the dungeon
 Choice : 0
 ```
-
 ### อธิบาย
 - Add items to the dungeon คือการเพิ่มข้อมูลเข้าไปในดันเจี้ยน ให้กรอกข้อมูลเก็บไว้เป็น dict แบบ global ดังนี้
 ```

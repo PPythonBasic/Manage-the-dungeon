@@ -16,7 +16,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
-          python-version: 'latest'  # replace with your desired Python version
+          python-version: 3.10.13 # replace with your desired Python version
 
       - name: Install dependencies
         run: pip install -r requirements.txt  # modify with your dependency installation command

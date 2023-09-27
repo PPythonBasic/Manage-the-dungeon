@@ -2,7 +2,6 @@ import pytest
 import mock
 import builtins
 from manage_the_dungeon import add_items, view_item
-
 def test_add_item_sword_and_price_300_amount_1_ok(capfd):
     with mock.patch.object(builtins, 'input', side_effect=['Sword', 300 , 1]):
         add_items()

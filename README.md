@@ -29,14 +29,14 @@ Sword 200G 1x
 หรือ
 ```
 Enter Item name : HP
-Enter Price : 50G
+Enter Price : 50
 Enter Amount : 1
 -------
 HP 50G 1x
 ```
 ```
 Enter Item name : HP
-Enter Price : 50G
+Enter Price : 50
 Enter Amount : 1
 -------
 HP 50G 1x
@@ -50,8 +50,11 @@ HP 50G 1x
 ```
 - View items in the dungeon คือการแสดงไอเทมทั้งหมดในดันเจี้ยนแสดงให้รูปแบบดังนี้
 ```
+---- Show All Items in the Dungeon -----
 - Sword 200G 1x
-- HP 50G 2x
+- HP 50G 1x
+- HP 50G 1x
+- HP 50G 1x
 ```
 - Let the hero enter the dungeon คือการให้ผู้เล่นเข้ามาดันเจี้ยนโดยให้มีลักษณะการทำงานดังนี้
 ```
@@ -61,10 +64,10 @@ Hero receives 1x Sword item.
 ```
 Hero receives 1x HP item.
 ```
-     * ผู้เล่นจะได้รับไอเทมจะได้มาจากการสุ่มไอเทม และสุ่มจำนวนของไอเทม
+     * ผู้เล่นจะได้รับไอเทมจะได้มาจากการสุ่มไอเทม
      * เมื่อผู้เล่นได้รับไอเทมไปแล้วไอเทมที่อยู่ในคลังของดันเจี้ยนชิ้นนั้นก็จะถูกลดลงไปตามจำนวนที่ผู้เล่นได้ไป
 
-### ฟังค์ชั่น
+### ฟังก์ชั่น
 - จะมีฟังก์ชันที่มีมาให้ที่ไฟล์ manage_the_dungeon.py
 ```python
     def match_funct(choice:int):

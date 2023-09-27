@@ -1,10 +1,38 @@
 list_items = []
 
+def add_items():
+    global list_items
+    while True:
+        item = input('Enter Item name : ')
+        if item != '':
+            break
+    while True:
+        price = input('Enter Price : ')
+        if price != '':
+            price = int(price)
+            break
+    while True:
+        amount = input('Enter Amount : ')
+        if amount != '':
+            amount = int(amount)
+            break
+
+    dict_item = {
+        'Item_name': item, 
+        'Price': price, 
+        'Amount': amount
+    }
+    list_items.append(dict_item)
+    print('-------')
+    print(f'{item} {price}G {amount}x')
+
 
 def view_item():
-    list_items
+    print(' Show All Items in the Dungeon '.center(40,"-"))
     for i in list_items:
         print(f"- {i['Item_name']} {i['Price']}G {i['Amount']}x")
+
+
 
 
 

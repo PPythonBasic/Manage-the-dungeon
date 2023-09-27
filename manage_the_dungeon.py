@@ -1,3 +1,30 @@
+list_items = []
+
+
+def view_item():
+    list_items
+    for i in list_items:
+        print(f"- {i['Item_name']} {i['Price']}G {i['Amount']}x")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 def match_funct(choice:int):
     match choice:
         case 1:

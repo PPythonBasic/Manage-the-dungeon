@@ -12,17 +12,21 @@
 Choice : 0
 ```
 ### อธิบาย
-- Add items to the dungeon คือการเพิ่มข้อมูลเข้าไปในดันเจี้ยน ให้กรอกข้อมูลเก็บไว้เป็น dict แบบ global ดังนี้
+รูปแบบตัวอย่างข้อมูลที่จะถูกเก็บ
 ```
 {'Item_name': '','Price':0,'Amount': 0}
 ```
-การแสดงผลก็จะเป็นเป็นดังนี้
+- สร้างข้อมูลเก็บไว้เป็น list แบบ global หนึ่งตัว
+- Add items to the dungeon คือการเพิ่มข้อมูลเข้าไปในดันเจี้ยน การแสดงผลก็จะเป็นเป็นดังนี้
 ```
 Enter Item name : Sword
 Enter Price : 200
 Enter Amount : 1
 -------
 Sword 200G 1x
+```
+```
+{'Item_name': 'Sword','Price':200,'Amount': 1}
 ```
 หรือ
 ```
@@ -33,11 +37,17 @@ Enter Amount : 1
 HP 50G 1x
 ```
 ```
+{'Item_name': 'HP','Price':50,'Amount': 1}
+```
+```
 Enter Item name : HP
 Enter Price : 50
 Enter Amount : 1
 -------
 HP 50G 1x
+```
+```
+{'Item_name': 'HP','Price':50,'Amount': 1}
 ```
 ```
 Enter Item name : HP
@@ -46,6 +56,10 @@ Enter Amount : 1
 -------
 HP 50G 1x
 ```
+```
+{'Item_name': 'HP','Price':50,'Amount': 1}
+```
+
 - View items in the dungeon คือการแสดงไอเทมทั้งหมดในดันเจี้ยนแสดงให้รูปแบบดังนี้
 ```
 ---- Show All Items in the Dungeon -----
@@ -55,6 +69,9 @@ HP 50G 1x
 - HP 50G 1x
 ```
 - Let the hero enter the dungeon คือการให้ผู้เล่นเข้ามาดันเจี้ยนโดยให้มีลักษณะการทำงานดังนี้
+     * ผู้เล่นจะได้รับไอเทมจะได้มาจากการสุ่มไอเทม
+     * เมื่อผู้เล่นได้รับไอเทมไปแล้วไอเทมที่อยู่ในคลังของดันเจี้ยนชิ้นนั้นก็จะถูกลดลงไปตามจำนวนที่ผู้เล่นได้ไป
+     * จากนั้นแสดงผลดังนี้
 ```
 Hero receives 1x Sword item.
 ```
@@ -62,8 +79,6 @@ Hero receives 1x Sword item.
 ```
 Hero receives 1x HP item.
 ```
-     * ผู้เล่นจะได้รับไอเทมจะได้มาจากการสุ่มไอเทม
-     * เมื่อผู้เล่นได้รับไอเทมไปแล้วไอเทมที่อยู่ในคลังของดันเจี้ยนชิ้นนั้นก็จะถูกลดลงไปตามจำนวนที่ผู้เล่นได้ไป
 
 ### ฟังก์ชั่น
 - จะมีฟังก์ชันที่มีมาให้ที่ไฟล์ manage_the_dungeon.py
@@ -84,6 +99,7 @@ Hero receives 1x HP item.
             match_funct(choice)
 ```
 - ในไฟล์ main.py ไม่ต้องแก้ไขอะไรใช้ในการรันโปรแกรมอย่างเดียว
+- 
 ### รันโปรแกรม
 ```
 python3 main.py
@@ -132,3 +148,10 @@ code .
 - ตั้งชื่อสิ่งที่เพิ่มเข้ามา จากนั้นเลือก `Create pull request` อีกครั้ง
 ![](https://cdn.discordapp.com/attachments/372372440334073859/1156574064001953802/image.png?ex=65157708&is=65142588&hm=3c2346880545bebaef1dd50412c9efbb2c098df7ac3b39f8e41a93e617a081e4&)
 - เสร็จจากนั้นรอเจ้าของโครงการ commit
+
+# การทดสอบ
+- ติดตั้ง pytest โดยใช้คำสั่ง
+```
+pip install pytest
+```
+- จากนั้นใช้คำสั่ง

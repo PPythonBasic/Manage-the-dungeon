@@ -152,6 +152,10 @@ code .
 # การทดสอบ
 - ติดตั้ง pytest โดยใช้คำสั่ง
 ```
-pip install pytest
+pip install -r requirements.txt
 ```
 - จากนั้นใช้คำสั่ง
+```
+pytest test.py --no-header --no-summary -v -s
+```
+- ถ้าผลรันผ่านแสดงว่าฟังก์ชันนั้นทำงานได้ดีถ้าไม่ผ่านก็ไปแก้โค้ด

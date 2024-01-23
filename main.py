@@ -1,4 +1,4 @@
-from manage_the_dungeon import run_dungeon
+from manage_the_dungeon import Dungeon
 
-if __name__ == "__main__":
-  run_dungeon()
+
+Dungeon().run_dungeon()
